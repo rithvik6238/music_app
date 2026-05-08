@@ -94,3 +94,8 @@ JAMENDO_CLIENT_ID=your_jamendo_client_id
 ```
 
 Note: Make sure `.env` is listed in your `.gitignore` file to prevent exposing your secrets.
+
+## If a Secret Was Exposed
+
+If any credential was committed accidentally, rotate or revoke it immediately in the provider dashboard.
+After rotation, scrub the secret from Git history (for example with `git filter-repo` or BFG), force-push the cleaned branch, and invalidate any cached build artifacts that may contain the leaked value.
